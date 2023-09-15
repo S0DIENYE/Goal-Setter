@@ -1,22 +1,25 @@
 const express = require('express')
 const router = express.Router()
 
+// Import controllers
+const { 
+    getGoals, 
+    setGoal, 
+    updateGoal, 
+    deleteGoal 
+} = require('../controllers/goalController')
+
 // create route
 
-router.get('/', (req, res) => {
-    res.status(200).json({msg: 'Get goals'})
-})
+// router.get('/', getGoals)
+// router.post('/', setGoal)
+// router.put('/:id', updateGoal)
+// router.delete('/:id', deleteGoal)
 
-router.post('/', (req, res) => {
-    res.status(200).json({msg: 'Set goals'})
-})
+// Bind methods with same route
+router.route('/').get(getGoals).post(setGoal)
+router.route('/:id').put(updateGoal).delete(deleteGoal)
 
-router.put('/:id', (req, res) => {
-    res.status(200).json({msg: `Update goal ${req.params.id}`})
-})
 
-router.delete('/:id', (req, res) => {
-    res.status(200).json({msg: `Delete goal ${req.params.id}`})
-})
 
 module.exports = router
