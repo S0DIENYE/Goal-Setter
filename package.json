@@ -1,0 +1,21 @@
+{
+  "name": "mern-stack---goals_app",
+  "version": "1.0.0",
+  "description": "Goal setter app with react redux",
+  "main": "server.js",
+  "scripts": {
+    "test": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "author": "Dienye Pepple",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
