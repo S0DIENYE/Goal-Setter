@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // direct endpoint to file
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 // override default error handler
 app.use(errorHandler)
